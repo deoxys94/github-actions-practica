@@ -1,0 +1,12 @@
+name: hola-gh-actions
+on: [push]
+jobs:
+  hola-gh-actions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup Go
+        uses: actions/setup-go@v5.0.2
+      - name: Get repo
+        uses: actions/checkout@v4.1.7
+      - name: Run Go script
+        run: go run hola.go
